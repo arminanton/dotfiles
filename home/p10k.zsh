@@ -58,14 +58,14 @@
     nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
     nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
     nodeenv                 # node.js environment (https://github.com/ekalinin/nodeenv)
-    # node_version          # node.js version
-    # go_version            # go version (https://golang.org)
-    # rust_version          # rustc version (https://www.rust-lang.org)
-    # dotnet_version        # .NET version (https://dotnet.microsoft.com)
-    # php_version           # php version (https://www.php.net/)
-    # laravel_version       # laravel php framework version (https://laravel.com/)
-    # java_version          # java version (https://www.java.com/)
-    # package               # name@version from package.json (https://docs.npmjs.com/files/package.json)
+    node_version          # node.js version
+    go_version            # go version (https://golang.org)
+    rust_version          # rustc version (https://www.rust-lang.org)
+    dotnet_version        # .NET version (https://dotnet.microsoft.com)
+    php_version           # php version (https://www.php.net/)
+    laravel_version       # laravel php framework version (https://laravel.com/)
+    java_version          # java version (https://www.java.com/)
+    package               # name@version from package.json (https://docs.npmjs.com/files/package.json)
     rbenv                   # ruby version from rbenv (https://github.com/rbenv/rbenv)
     rvm                     # ruby version from rvm (https://rvm.io)
     fvm                     # flutter version management (https://github.com/leoafarias/fvm)
@@ -84,7 +84,7 @@
     gcloud                  # google cloud cli account and project (https://cloud.google.com/)
     google_app_cred         # google application credentials (https://cloud.google.com/docs/authentication/production)
     toolbox                 # toolbox name (https://github.com/containers/toolbox)
-    context                 # user@hostname
+    #context                 # user@hostname
     nordvpn                 # nordvpn connection status, linux only (https://nordvpn.com/)
     ranger                  # ranger shell (https://github.com/ranger/ranger)
     nnn                     # nnn shell (https://github.com/jarun/nnn)
@@ -94,9 +94,9 @@
     nix_shell               # nix shell (https://nixos.org/nixos/nix-pills/developing-with-nix-shell.html)
     vi_mode                 # vi mode (you don't need this if you've enabled prompt_char)
     # vpn_ip                # virtual private network indicator
-    # load                  # CPU load
-    # disk_usage            # disk usage
-    # ram                   # free RAM
+    load                  # CPU load
+    disk_usage            # disk usage
+    ram                   # free RAM
     # swap                  # used swap
     todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
     timewarrior             # timewarrior tracking status (https://timewarrior.net/)
@@ -104,9 +104,10 @@
     # time                  # current time
     # =========================[ Line #2 ]=========================
     newline
+    context
     # ip                    # ip address and bandwidth usage for a specified network interface
     # public_ip             # public IP address
-    # proxy                 # system-wide http/https/ftp proxy
+    #proxy                 # system-wide http/https/ftp proxy
     # battery               # internal battery
     # wifi                  # wifi speed
     # example               # example user-defined segment (see prompt_example function below)
@@ -913,20 +914,20 @@
   typeset -g POWERLEVEL9K_CONTEXT_BACKGROUND=0
 
   # Context format when running with privileges: user@hostname.
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='%n@%m'
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE='[%n]@[%m]'
   # Context format when in SSH without privileges: user@hostname.
-  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='%n@%m'
+  typeset -g POWERLEVEL9K_CONTEXT_{REMOTE,REMOTE_SUDO}_TEMPLATE='[%n]@[%m]'
   # Default context format (no privileges, no SSH): user@hostname.
-  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='%n@%m'
+  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE='[%n]@[%m]'
 
   # Don't show context unless running with privileges or in SSH.
   # Tip: Remove the next line to always show context.
-  typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_{CONTENT,VISUAL_IDENTIFIER}_EXPANSION=
+  #typeset -g POWERLEVEL9K_CONTEXT_{DEFAULT,SUDO}_{CONTENT,VISUAL_IDENTIFIER}_EXPANSION=
 
   # Custom icon.
   # typeset -g POWERLEVEL9K_CONTEXT_VISUAL_IDENTIFIER_EXPANSION='⭐'
   # Custom prefix.
-  typeset -g POWERLEVEL9K_CONTEXT_PREFIX='with '
+  #typeset -g POWERLEVEL9K_CONTEXT_PREFIX='with '
 
   ###[ virtualenv: python virtual environment (https://docs.python.org/3/library/venv.html) ]###
   # Python virtual environment color.
