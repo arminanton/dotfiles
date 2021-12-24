@@ -5,7 +5,7 @@
 ############################
 
 #################################
-export WILLIAM_DEV="/Users/e126380/dev"
+export WILLIAM_DEV="/usr/local/share/dev-utils"
 
 export WILLIAM_DOTFILES="$WILLIAM_DEV/dotfiles"
 
@@ -15,11 +15,11 @@ export ZSH_CUSTOM="$WILLIAM_DEV/tools/oh-my-zsh_custom"
 #################################
 
 function link_configs() {
-    dir=~/dev/dotfiles                     # dotfiles directory
-    timenow=$(date +'%Y-%m-%d_%Hh-%Mm-%Ss-%p-%Z')   # backup folder
+    dir=$WILLIAM_DOTFILES                    # dotfiles directory
+    timenow=$(date +'%Y-%m-%d_%Hh-%Mm-%Ss-%p-%Z')_$(whoami)   # backup folder
     olddir=$dir/backup_old/$timenow        # old dotfiles backup directory
     files="bash_profile zshrc p10k.zsh"             # list of files/folders to symlink in homedir
-    devcache=~/dev/cache
+    devcache=$WILLIAM_DEV/cache
     ##########
 
     # create dotfiles_old in homedir
@@ -100,9 +100,14 @@ function link_configs() {
     # Custom mc-sudo
     cp -a $dir/plugins/. $ZSH_CUSTOM/plugins/
 
+    echo ""
+    echo ""
+    echo ""    
     echo "!! Make sure to install Pygments later on (using pip) !!"
     echo "!! Currently using MC-SUDO, change when necessary !!"
-
+    echo ""
+    echo ""
+    echo ""
     echo "Done! Re-load/open your terminal!"
 }
 

@@ -2,7 +2,7 @@
 
 #import this file to bash_profile
 
-export WILLIAM_DEV="/Users/e126380/dev"
+export WILLIAM_DEV="/usr/local/share/dev-utils"
 
 export WILLIAM_DOTFILES="$WILLIAM_DEV/dotfiles"
 

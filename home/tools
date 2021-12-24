@@ -8,7 +8,10 @@ export CLICOLOR=1
 export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
 # CARGO
-. "$HOME/.cargo/env"
+if [ -d $HOME/.cargo/env ]
+then
+    . "$HOME/.cargo/env"
+fi
 
 # Newer gradle
 export PATH="/opt/gradle/gradle-7.3.3/bin:$PATH"
@@ -18,3 +21,8 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
+# AWS-CLI
+export PATH="/opt/aws-cli:$PATH"
+
+# Vagrant
+export PATH="/opt/vagrant/bin:$PATH"

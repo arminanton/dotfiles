@@ -97,7 +97,6 @@ plugins=(
   python
   jsontools
   alias-finder
-  aws
   colorize
   composer
   cp
@@ -158,8 +157,8 @@ plugins=(
   yum
 )
 
-ZSH_DISABLE_COMPFIX="true"
 ZSH_COLORIZE_STYLE="colorful"
+ZSH_DISABLE_COMPFIX="true"
 
 source $ZSH/oh-my-zsh.sh
 
