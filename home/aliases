@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# env changes
+
+# Functions
+. "$WILLIAM_DOTFILES/home/functions"
+
+# Shortcuts
+
+alias aws-login="aws --profile lpstg sso login"
+alias fw-xdebug="ssh -NR 9002:localhost:9002 -i ~/.ssh/id_rsa ndsadmin@vm.local"
+
+alias dev="cd ~/dev"
+alias dth="cd ~/dev/dotfiles/home"
+alias dl="cd ~/Downloads"
+alias dt="cd ~/Desktop"
+alias g="git"
+alias h="history"
+alias lc='colorls -r'
+alias edit-zsh="vim ~/dev/dotfile/home/zshrc"
+alias edit-p10k="vim ~/dev/dotfile/home/p10k.zsh"
+alias reload-zsh="exec zsh" #"source ~/william_zsh"
+alias reload-p10k="p10k reload"
+alias reload-alias="source ~/dev/dotfiles/home/aliases"
+alias undo-dotfiles="~/dev/dotfiles/unlink.sh"
+alias admin-shell="su -m tecdvp3 -c \"sudo zsh\""
+
+alias exa="~/dev/dotfiles/tools/exa"
+alias bat="~/dev/dotfiles/tools/bat"
+alias cls="clear"
+alias ll="~/dev/dotfiles/tools/exa -lahFs 'name'"
+alias p10k-reset='source "${$WILLIAM_DOTFILES}/home/p10k.zsh"'
+
+alias localip="ipconfig getifaddr en0"
+alias dhelp="grep "^function" ~/dev/dotfiles/home/functions | sed -e 's/function/\[/g; /\[/ s/\ //;' | sed 's/() #/] -> /g'"
+
+alias dockps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}"'                                                            
+alias dockports='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}"'

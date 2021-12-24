@@ -1,0 +1,5 @@
+#!/bin/bash
+
+. "$WILLIAM_DOTFILES/home/tools"
+
+. "$WILLIAM_DOTFILES/home/aliases"

@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Mastercard laptop ENV
+source /Users/e126380/.macbook-setup/mc-laptop-env.sh
+
+# AWS DevVM aliases
+. ~/.vagrant_aliases
+
+# william profile invoker
+. ~/william_bash;

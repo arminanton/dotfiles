@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#import this file to bash_profile
+
+export WILLIAM_DEV="/Users/e126380/dev"
+
+export WILLIAM_DOTFILES="$WILLIAM_DEV/dotfiles"
+
+. "$WILLIAM_DOTFILES/home/bash"
