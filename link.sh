@@ -23,11 +23,11 @@ function link_configs() {
     ##########
 
     # create dotfiles_old in homedir
-    echo "Creating folder at: "
-    echo "[$olddir]"
-    echo "for backup of any existing dotfiles in ~"
-    mkdir -p $olddir
-    echo "...done"
+    #echo "Creating folder at: "
+    #echo "[$olddir]"
+    #echo "for backup of any existing dotfiles in ~"
+    #mkdir -p $olddir
+    #echo "...done"
 
     # change to the dotfiles directory
     #echo "Changing to the $dir directory"
@@ -38,28 +38,20 @@ function link_configs() {
     for file in $files; do
       if [ -e ~/.$file ]
       then
-        cp ~/.$file $olddir/$file
+        echo "~/.$file $olddir/$file"
       fi
       
       #echo "Creating symlink to $file in home directory."
       #ln -s $dir/$file ~/.$file
     done
 
-    echo "Preparing cache folder..."
-    cp -a ~/.cache/. $devcache/
-    rm -rf ~/.cache
-    ln -s $devcache ~/.cache
+    #echo "Preparing cache folder..."
+    #cp -a ~/.cache/. $devcache/
+    #rm -rf ~/.cache
+    #ln -s $devcache ~/.cache
 
     echo "Preparing bash/zsh profile loader..."
     cp -a $dir/loader/. ~/
-
-    cat <<< '
-
-# william profile invoker
-. ~/william_bash
-
-
-' >> ~/.bash_profile
 
     #install oh-my-zsh
     echo "Installing Oh-My-Zsh..."
@@ -104,7 +96,6 @@ function link_configs() {
     echo ""
     echo ""    
     echo "!! Make sure to install Pygments later on (using pip) !!"
-    echo "!! Currently using MC-SUDO, change when necessary !!"
     echo ""
     echo ""
     echo ""

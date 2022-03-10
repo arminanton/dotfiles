@@ -5,16 +5,17 @@ export TERM='xterm-256color'
 export CLICOLOR=1
 
 # MacPorts 
-export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+#export PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
 # CARGO
-if [ -d $HOME/.cargo/env ]
-then
-    . "$HOME/.cargo/env"
-fi
+export CARGO_HOME="$WILLIAM_DOTFILES/tools/cargo"
+export PATH="$CARGO_HOME/bin:$PATH"
 
 # Newer gradle
-export PATH="/opt/gradle/gradle-7.3.3/bin:$PATH"
+#export PATH="/opt/gradle/gradle-7.3.3/bin:$PATH"
+
+export PATH="$PATH:$HOME/.local/bin:$HOME/bin"
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # NVM
 export NVM_DIR="$HOME/.nvm"
@@ -22,7 +23,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # AWS-CLI
-export PATH="/opt/aws-cli:$PATH"
+#export PATH="/opt/aws-cli:$PATH"
 
 # Vagrant
-export PATH="/opt/vagrant/bin:$PATH"
+#export PATH="/opt/vagrant/bin:$PATH"
