@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# env changes
-
 # Functions
 . "$WILLIAM_DOTFILES/home/functions"
 
@@ -10,25 +8,40 @@
 alias aws-login="aws --profile lpstg sso login"
 alias fw-xdebug="ssh -NR 9002:localhost:9002 -i ~/.ssh/id_rsa ndsadmin@vm.local"
 
-alias dev-utils="$WILLIAM_DEV"
+alias dev-utils="cd $WILLIAM_DEV"
 alias dth="cd $WILLIAM_DOTFILES/home"
+
+alias clientlibs="cd ~/dev/nudetect/clientlibs/sdks"
+alias clientlibs-dotnet="clientlibs; cd ./dotnet/"
+alias clientlibs-java="clientlibs; cd ./java/"
+alias clientlibs-php="clientlibs; cd ./php/"
+alias clientlibs-ruby="clientlibs; cd ./ruby/"
+alias clientlibs-js="clientlibs; cd ./js/"
+alias clientlibs-python="clientlibs; cd ./python/"
+
 alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias g="git"
 alias h="history"
 alias lc='colorls -r'
-alias edit-zsh="vim $WILLIAM_DOTFILES/home/zshrc"
-alias edit-p10k="vim $WILLIAM_DOTFILES/home/p10k.zsh"
+
+alias edit-zsh="vim $WILLIAM_DOTFILES/home/zshrc; exec zsh"
+alias edit-p10k="vim $WILLIAM_DOTFILES/home/p10k.zsh; exec zsh"
+alias edit-aliases="vim $WILLIAM_DOTFILES/home/aliases; reload-aliases"
+alias edit-tools="vim $WILLIAM_DOTFILES/home/tools; exec zsh"
+alias edit-fn="vim $WILLIAM_DOTFILES/home/functions; exec zsh"
 alias reload-zsh="exec zsh" #"source ~/william_zsh"
 alias reload-p10k="p10k reload"
-alias reload-alias="source $WILLIAM_DOTFILES/home/aliases"
+alias reload-aliases="source $WILLIAM_DOTFILES/home/aliases"
+
 alias undo-dotfiles="$WILLIAM_DOTFILES/unlink.sh"
 alias admin-shell="su -m tecdvp3 -c \"sudo zsh\""
 
 alias exa="$WILLIAM_DOTFILES/tools/exa"
 alias bat="$WILLIAM_DOTFILES/tools/bat"
 alias cls="clear"
-alias ll="$WILLIAM_DOTFILES/tools/exa -lahFs 'name'"
+alias ll="exa -lgahFs 'name' --tree --level=1 --long"
+alias lt="exa -lgahFs 'name' --tree --level=2 --long"
 alias p10k-reset='source "${$WILLIAM_DOTFILES}/home/p10k.zsh"'
 
 alias localip="ipconfig getifaddr en0"
@@ -36,3 +49,7 @@ alias dhelp="grep "^function" $WILLIAM_DOTFILES/home/functions | sed -e 's/funct
 
 alias dockps='docker ps --format "table {{.ID}}\t{{.Image}}\t{{.Status}}\t{{.Names}}"'                                                            
 alias dockports='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Ports}}"'
+
+# dev aliases
+alias projects="cd ~/projects"
+

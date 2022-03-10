@@ -45,10 +45,10 @@ function link_configs() {
       #ln -s $dir/$file ~/.$file
     done
 
-    echo "Preparing cache folder..."
-    cp -a ~/.cache/. $devcache/
-    rm -rf ~/.cache
-    ln -s $devcache ~/.cache
+    #echo "Preparing cache folder..."
+    #cp -a ~/.cache/. $devcache/
+    #rm -rf ~/.cache
+    #ln -s $devcache ~/.cache
 
     echo "Preparing bash/zsh profile loader..."
     cp -a $dir/loader/. ~/

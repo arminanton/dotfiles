@@ -4,8 +4,8 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "$WILLIAM_DEV/cache/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "$WILLIAM_DEV/cache/p10k-instant-prompt-${(%):-%n}.zsh"
+if [[ -r "~/.cache/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "~/.cache/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
 # If you come from bash you might have to change your $PATH.
@@ -162,8 +162,6 @@ ZSH_DISABLE_COMPFIX="true"
 
 source $ZSH/oh-my-zsh.sh
 
-zstyle ':completion:*:*:docker:*' option-stacking yes
-zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 # User configuration
 
@@ -196,3 +194,6 @@ zstyle ':completion:*:*:docker-*:*' option-stacking yes
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f "$WILLIAM_DOTFILES/home/p10k.zsh" ]] || source "$WILLIAM_DOTFILES/home/p10k.zsh"
+
+
+

@@ -1,0 +1,21 @@
+vagrant_rsync () {
+    if ! ps -o command | grep -q '^ruby /opt/vagrant/.*/bin/vagrant rsync-auto$'; then
+        vagrant rsync-auto > /dev/null &
+        echo "vagrant rsync-auto has been started."
+    else
+        echo "vagrant rsync-auto is already running." >&2
+    fi
+}
+vagrant_rsync_stop () {
+    if [[ `kill -KILL $(ps -o pid,command | grep '.*vagrant rsync-auto$' | awk '{print $1}') 2>&1 > /dev/null` ]];
+    then
+        echo "vagrant rsync-auto wasn't running."
+    else
+        echo "vagrant rysnc-auto has been stopped."
+    fi
+}
+alias devvm="cd ~/projects/vagrant-devvm"
+alias devvm-up="cd ~/projects/vagrant-devvm; vagrant up; vagrant_rsync"
+alias devvm-ssh="cd ~/projects/vagrant-devvm; vagrant up; vagrant_rsync; vagrant ssh"
+alias devvm-ssh-pure="cd ~/projects/vagrant-devvm; vagrant up; vagrant ssh"
+alias devvm-down="cd ~/projects/vagrant-devvm; vagrant_rsync_stop; vagrant halt;"
