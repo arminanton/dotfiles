@@ -1,5 +1,37 @@
 #!/bin/bash
 
+# Set equal base between users
+export PATH="~/bin:$PATH"
+export PATH="/usr/local/git/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
+export PATH="/usr/local/laps:$PATH"
+export PATH="/usr/local/share/dotnet:$PATH"
+export PATH="~/.dotnet/tools:$PATH"
+export PATH="/Library/Apple/usr/bin:$PATH"
+export PATH="/Library/Frameworks/Mono.framework/Versions/Current/Commands:$PATH"
+export PATH="/opt/apache-maven-3.6.3/bin:$PATH"
+export PATH="~/.nvm/versions/node/v17.2.0/bin:$PATH"
+export PATH="~/.fzf/bin:$PATH"
+
+export LC_TERMINAL="iTerm2"
+export COLORTERM="truecolor"
+export NVM_BIN="~/.nvm/versions/node/v17.2.0/bin"
+export NVM_INC="~/.nvm/versions/node/v17.2.0/include/node"
+export SSH_AUTH_SOCK="/private/tmp/com.apple.launchd.QjeqkRjVmm/Listeners"
+export LC_TERMINAL_VERSION="3.4.15"
+export COLORFGBG="7;0"
+export LANG="en_CA.UTF-8"
+export COMMAND_MODE="unix2003"
+export SECURITYSESSIONID="186b5"
+export XPC_FLAGS="0x0"
+export XPC_SERVICE_NAME="0"
+export __CF_USER_TEXT_ENCODING="0x3B77CF05:0x0:0x52"
+export __CFBundleIdentifier="com.googlecode.iterm2"
+export ITERM_PROFILE="Default"
+export TERM_PROGRAM_VERSION="3.4.15"
+export TERM_PROGRAM="iTerm.app"
+
 # Git TLS SSL disable
 export GIT_SSL_NO_VERIFY="true" 
 
@@ -27,7 +59,7 @@ export PATH="$PATH:/usr/local/go/bin"
 export PATH="/opt/gradle/gradle-7.3.3/bin:$PATH"
 
 # NVM
-export NVM_DIR="$HOME/.nvm"
+export NVM_DIR="~/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
@@ -38,5 +70,5 @@ export PATH="/opt/aws-cli:$PATH"
 export PATH="/opt/vagrant/bin:$PATH"
 
 # FZF
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
