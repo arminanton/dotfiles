@@ -31,6 +31,10 @@ export __CFBundleIdentifier="com.googlecode.iterm2"
 export ITERM_PROFILE="Default"
 export TERM_PROGRAM_VERSION="3.4.15"
 export TERM_PROGRAM="iTerm.app"
+#export JAVA_HOME="/Library/Internet Plug-Ins/JavaAppletPlugin.plugin/Contents/Home"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home"
+#export JAVA_HOME="$(/usr/libexec/java_home ${version})"
+export PATH="$JAVA_HOME/bin:$PATH"
 
 # Git TLS SSL disable
 export GIT_SSL_NO_VERIFY="true" 
