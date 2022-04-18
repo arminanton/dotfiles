@@ -1,5 +1,32 @@
 #!/bin/bash
 
+export PATH="~/bin:$PATH"
+export PATH="/usr/local/git/bin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/go/bin:$PATH"
+export PATH="/usr/local/laps:$PATH"
+export PATH="/usr/local/share/dotnet:$PATH"
+export PATH="~/.dotnet/tools:$PATH"
+
+export LC_TERMINAL="iTerm2"
+export COLORTERM="truecolor"
+export LC_TERMINAL_VERSION="3.4.15"
+export COLORFGBG="7;0"
+export LANG="en_CA.UTF-8"
+export COMMAND_MODE="unix2003"
+export SECURITYSESSIONID="186b5"
+export XPC_FLAGS="0x0"
+export XPC_SERVICE_NAME="0"
+export __CF_USER_TEXT_ENCODING="0x3B77CF05:0x0:0x52"
+export __CFBundleIdentifier="com.googlecode.iterm2"
+export ITERM_PROFILE="Default"
+export TERM_PROGRAM_VERSION="3.4.15"
+export TERM_PROGRAM="iTerm.app"
+
+export JAVA_HOME="/home/linuxbrew/.linuxbrew/opt/openjdk@8/libexec"
+export JAVACMD="$JAVA_HOME/bin/java"
+export PATH="$JAVA_HOME/bin:$PATH"
+
 # colors
 export TERM='xterm-256color'
 export CLICOLOR=1
