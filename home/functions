@@ -2,6 +2,14 @@
 
 function dhelp() # Show all dotfile commands available
 
+function bkp() # Creates tar bkp file for the path specified
+{
+    local DATE=$(date +%Y-%m-%d-%H%M%S);
+    local BACKUP_DIR="/$WILLIAM_DEV/backup";
+    tar -cvzpf $BACKUP_DIR/bkp_$DATE.tar.gz $@;
+}
+
+
 function calc() # Simple calculator
 {
 	local result="";
